@@ -7,6 +7,7 @@ import Nav from './Components/NavSection/Nav';
 import Hero from './Components/Header/Hero'
 
 
+
 function App() {
   return (
     <BrowserRouter>

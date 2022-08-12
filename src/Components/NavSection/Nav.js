@@ -10,7 +10,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 
 function Nav(){
     return(
-    <section className='bg-white w-full h-full px-5 md:px-20 py-3 flex justify-between items-center'>
+    <section className='bg-white w-full px-5 md:px-20 py-3 flex justify-between items-center'>
         <div className='md:hidden'>
             <GiHamburgerMenu className='font-bold text-3xl cursor-pointer'/>
         </div>

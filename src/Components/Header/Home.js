@@ -4,21 +4,21 @@ import {AiOutlineSearch} from 'react-icons/ai'
 
 function Home(){
     return(
-        <section>
-            <div className="bg-slate-600 w-full md:h-[500px] lg:h-[full] overflow-hidden absolute">
-            <img className="mix-blend-overlay w-full " src={HeroImg} alt="hero img"/>
+        <section className="w-full">
+            <div className="bg-slate-700 w-full lg:h-[700px] absolute">
+            <img className="mix-blend-overlay w-full sm:h-full md:h-[400px] lg:h-[700px] object-cover " src={HeroImg} alt="hero img"/>
             </div>
-            <div className="relative flex justify-center items-center w-full pt-10 md:pt-[80px]">
-            <div className="flex justify-start items-center bg-white w-[300px] md:w-[600px] md:h-[100px] py-5 px-5">
-                <AiOutlineSearch className="md:font-bold md:text-4xl text-xl mr-3"/>
-                <input className="outline-none border-none md:text-2xl text-xl" type='text' placeholder="Serach Recipe"/>
+            <div className="relative w-full flex flex-row justify-center items-center md:pt-28 pt-20">
+                <div className="w-[90%] md:w-[60%]  flex flex-row justify-between items-center bg-white px-7 py-3">
+                    <input className="border-none outline-none text-xl" type='text' placeholder="Search Recipe"/>
+                    <AiOutlineSearch className="text-xl font-bold"/>
+                </div>
             </div>
-                
+            <div className="relative text-white text-center px-5 md:px-20">
+            <p>Get a pecific type of recipe you would love to work with using the above search bar</p>
+
             </div>
-            <div className="relative text-center text-white pt-5 md:pt-10">
-                <h1 className="font-bold text-2xl md:text-6xl">GET THE MOST OUT OF US</h1>
-                <h5 className="text-xl md:text-4xl">EAT GOOD</h5>
-            </div>
+            
         </section>
     )
 }
