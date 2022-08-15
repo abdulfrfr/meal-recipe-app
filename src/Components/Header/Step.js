@@ -1,12 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FaListAlt} from 'react-icons/fa'
 import {ImPriceTags} from 'react-icons/im'
 import {GiCampCookingPot, GiMeal} from 'react-icons/gi'
+import images from './images'
 
 function Step(){
+    
+    const [imgUrl, setImgUrl] = useState(images);
+    const [imgIndex, setImgIndex] = useState(0);
+
+    // function increaseIndex(){
+    //     {imgIndex === 4 ? setImgIndex(0) : setImgIndex(imgIndex + 1)}
+    // }
+
+    // setInterval(()=> setImgIndex(increaseIndex), 2000)
+
     return(
-        <section className='relative text-center md:mt-20 mt-20'>
-            <div className='text-center md:text-white'>
+        <section className=''>
+            <div className='w-full h-[40vh] md:h-[70vh] overflow-hidden'>
+                {imgUrl.map((img, index)=> {return (
+                    <div>
+                       {index === imgIndex && 
+                       <img key={img.key} className='w-full object-center overflow-hidden' src={img.url} alt="img"/>
+                       } 
+                    </div>
+                )} )}
+            </div>
+
+            {/* <div className='text-center md:text-white'>
                 <h1 className='font-bold text-5xl pb-3'>STEP-BY-STEP</h1>
                 <p className='text-xl'>we will offer you guidiance to preparation to various meals!</p>
             </div>
@@ -33,7 +54,7 @@ function Step(){
                     <p></p>
                 </div>
                 
-            </div>
+            </div> */}
         </section>
     );
 }

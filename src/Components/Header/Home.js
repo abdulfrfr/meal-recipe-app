@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImg from './hero-img.jpeg'
 import {AiOutlineSearch} from 'react-icons/ai'
+import {Link} from 'react-router-dom'
 
 function Home(){
     return(
@@ -17,7 +18,7 @@ function Home(){
             <p className="md:text-4xl md:w-[50rem] mt-5 w-[20rem]">Get a pecific type of recipe you would love to work with using the above search bar</p>
             </div>
             <div className="mt-10">
-                <button className="bg-green-400 px-10 py-3 rounded-3xl text-white hover:bg-green-600">Get Started</button>
+                <Link to="/main"><button className="bg-green-400 px-10 py-3 rounded-3xl text-white hover:bg-green-600">Get Started</button></Link>
             </div>
             </div>
             
