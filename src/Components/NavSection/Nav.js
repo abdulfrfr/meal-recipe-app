@@ -17,7 +17,7 @@ function Nav(){
 
         <div className='md:flex hidden justify-between items-center '>
             <AiFillHeart className='text-orange-500 text-xl mr-2'/>
-            <span className='font-bold'>Login/SignUp</span>
+            <span className='font-bold'><button>Login</button>/<button>SignUp</button></span>
         </div>
         <div>
             <h1 className='font-bold text-2xl'>@abdulfrfr</h1>
@@ -25,18 +25,11 @@ function Nav(){
 
         <div className='md:flex justify-center items-center hidden'>
             <span className='mr-1'>Follow:-</span>
-            <AiFillTwitterCircle className='mr-5 text-2xl text-orange-500'/>
-            <AiFillGithub className='mr-5 text-2xl text-orange-500'/>
-            <AiFillLinkedin className='mr-5 text-2xl text-orange-500'/>
+            <AiFillTwitterCircle className='mr-5 text-2xl hover:text-orange-700  text-orange-500'/>
+            <AiFillGithub className='mr-5 text-2xl hover:text-orange-700  text-orange-500'/>
+            <AiFillLinkedin className='mr-5 text-2xl hover:text-orange-700  text-orange-500'/>
         </div>
-        <div className='hidden'>
-            <Link to='African' className='mr-5  hover:border-b-2 border-blue-400 hover:text-white'>AFRICAN MEALS</Link>
-            <Link to='Italian' className='mr-5  hover:border-b-2 border-blue-400 hover:text-white'>ITALIAN MEALS</Link>
-            <Link to='American' className='mr-5  hover:border-b-2 border-blue-400 hover:text-white'>AMERICAN MEALS</Link>
-            <Link to='Spanish' className='mr-5  hover:border-b-2 border-blue-400 hover:text-white'>SPANISH MEALS</Link>
-        </div>
-    
-
+        
     </section>
     )
 }
