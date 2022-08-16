@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {FaListAlt} from 'react-icons/fa'
 import {ImPriceTags} from 'react-icons/im'
 import {GiCampCookingPot, GiMeal} from 'react-icons/gi'
@@ -9,25 +9,36 @@ function Step(){
     const [imgUrl, setImgUrl] = useState(images);
     const [imgIndex, setImgIndex] = useState(0);
 
-    // function increaseIndex(){
-    //     {imgIndex === 4 ? setImgIndex(0) : setImgIndex(imgIndex + 1)}
-    // }
+    const imgLength = imgUrl.length;
 
-    // setInterval(()=> setImgIndex(increaseIndex), 2000)
+    function increaseIndex(){
+        setImgIndex(imgIndex === imgLength -1 ? 0 : imgIndex + 1)
+    }
+
+ 
+    
 
     return(
         <section className=''>
-            <div className='w-full h-[40vh] md:h-[70vh] overflow-hidden'>
+            <div className='w-full overflow-hidden h-[40vh] md:h-[70vh]'>
                 {imgUrl.map((img, index)=> {return (
                     <div>
                        {index === imgIndex && 
-                       <img key={img.key} className='w-full object-center overflow-hidden' src={img.url} alt="img"/>
+                       <img 
+                       onClick={increaseIndex} 
+                       key={img.key} 
+                       className={index === imgIndex ? 'w-full transform translate-0 transition-all delay-200 duration-200' : 'w-full -translate-6'}  
+                       src={img.url} 
+                       alt="img"/>
                        } 
                     </div>
                 )} )}
             </div>
+                
+            
 
-            {/* <div className='text-center md:text-white'>
+            <div className='mt-10'>
+            <div className='text-center'>
                 <h1 className='font-bold text-5xl pb-3'>STEP-BY-STEP</h1>
                 <p className='text-xl'>we will offer you guidiance to preparation to various meals!</p>
             </div>
@@ -54,7 +65,8 @@ function Step(){
                     <p></p>
                 </div>
                 
-            </div> */}
+            </div>
+            </div>
         </section>
     );
 }
