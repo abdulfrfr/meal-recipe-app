@@ -1,8 +1,8 @@
-import img1 from './img-2.jpeg'
-import img2 from './img-1.jpeg'
-import img3 from './img-3.jpeg'
-import img4 from './img-4.jpg'
-import img5 from './img-5.jpeg'
+import img1 from './images/img-2.jpeg'
+import img2 from './images/img-1.jpeg'
+import img3 from './images/img-3.jpeg'
+import img4 from './images/img-4.jpg'
+import img5 from './images/img-5.jpeg'
 
 const images = [
     {key: 0,url: img1},

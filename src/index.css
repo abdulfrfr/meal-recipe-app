@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .notTheOne{
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all .5s ease;
+    transition-duration: 150ms;
+
+}
+
+.theOne{
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0);
+} */

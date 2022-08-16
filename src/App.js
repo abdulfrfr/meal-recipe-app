@@ -4,8 +4,8 @@ import {
           Route
         } from 'react-router-dom';
 import Nav from './Components/NavSection/Nav';
-import Hero from './Components/Header/Hero'
-import Step from './Components/Header/Step'
+import Hero from './Components/Hero/Hero'
+import Main from './Components/Header/Main'
 
 
 
@@ -15,7 +15,7 @@ function App() {
     <Nav/>
     <Routes>
     <Route path='/' element={<Hero/>}/>
-    <Route path='/main' element={<Step/>}/>
+    <Route path='/main' element={<Main/>}/>
 
     </Routes>
     </BrowserRouter>

@@ -7,7 +7,6 @@ function Hero(){
     return(
         <section>
             <Home/>
-            
         </section>
     )
 }

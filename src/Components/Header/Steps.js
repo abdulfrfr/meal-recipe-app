@@ -1,43 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {FaListAlt} from 'react-icons/fa'
 import {ImPriceTags} from 'react-icons/im'
 import {GiCampCookingPot, GiMeal} from 'react-icons/gi'
-import images from './images'
 
-function Step(){
-    
-    const [imgUrl, setImgUrl] = useState(images);
-    const [imgIndex, setImgIndex] = useState(0);
-
-    const imgLength = imgUrl.length;
-
-    function increaseIndex(){
-        setImgIndex(imgIndex === imgLength -1 ? 0 : imgIndex + 1)
-    }
-
- 
-    
-
+function Step (){
     return(
-        <section className=''>
-            <div className='w-full overflow-hidden h-[40vh] md:h-[70vh]'>
-                {imgUrl.map((img, index)=> {return (
-                    <div>
-                       {index === imgIndex && 
-                       <img 
-                       onClick={increaseIndex} 
-                       key={img.key} 
-                       className={index === imgIndex ? 'w-full transform translate-0 transition-all delay-200 duration-200' : 'w-full -translate-6'}  
-                       src={img.url} 
-                       alt="img"/>
-                       } 
-                    </div>
-                )} )}
-            </div>
-                
-            
-
-            <div className='mt-10'>
+        <section>
+             <div className='mt-10'>
             <div className='text-center'>
                 <h1 className='font-bold text-5xl pb-3'>STEP-BY-STEP</h1>
                 <p className='text-xl'>we will offer you guidiance to preparation to various meals!</p>
@@ -68,7 +37,7 @@ function Step(){
             </div>
             </div>
         </section>
-    );
+    )
 }
 
 export default Step;
