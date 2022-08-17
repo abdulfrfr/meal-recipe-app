@@ -3,7 +3,7 @@ import images from './images'
 
 function Heros(){
     
-    const [imgUrl, setImgUrl] = useState(images);
+    const imgUrl = images;
     const [imgIndex, setImgIndex] = useState(0);
 
     const imgLength = imgUrl.length;
@@ -12,12 +12,26 @@ function Heros(){
         setImgIndex(imgIndex === imgLength -1 ? 0 : imgIndex + 1)
     }
 
-    // useEffect(()=> {setImgIndex(0);
-    //      clearInterval()}, [])
+    useEffect(()=> {
+        setImgIndex(0);
+        }, []);
 
-    // setInterval(() => {
-    //     increaseIndex();
-    // }, 5000);
+        const isTrue = true;
+        let callInterval;
+        const timing = 4000;
+
+        function auto(){
+            callInterval = setInterval(increaseIndex, timing)
+        }
+
+        useEffect(()=>{
+            if(isTrue){
+                auto()
+        }
+        return ()=> clearInterval(callInterval);
+        }, [ imgIndex ])
+
+
 
  
     
@@ -26,7 +40,7 @@ function Heros(){
         <section className=''>
             <div className='w-full overflow-hidden h-[40vh] opacity md:h-[70vh]'>
                 {imgUrl.map((img, index)=> {return (
-                <div className={index === imgIndex ? 'w-full transform opacity-0 opacity-[1] -translate-x-[20%] -translate-x-[0] transition-all duration-300' : 'transform opacity-0 -translate-x-[20%]'}>
+                <div className={index === imgIndex ? 'w-full transform opacity-0 opacity-[1] -translate-x-[20%] -translate-x-[0] transition-all duration-700' : 'transform opacity-0 -translate-x-[20%]'}>
                        {index === imgIndex && 
                        <img 
                        onClick={increaseIndex} 

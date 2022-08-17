@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import HeroImg from './hero-img.jpeg'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {Link} from 'react-router-dom'
 
 function Home(){
+    const [searchData, setSearchData] = useState('');
+
+    function getSearchInput(event){
+        const value = event.target.value;
+
+        setSearchData(value);
+    }
+
     return(
         <section className="w-full">
             <div className="bg-slate-700 w-full h-[91vh] absolute ">
@@ -11,7 +19,7 @@ function Home(){
             </div>
             <div className="relative w-full flex flex-col justify-center items-center h-[500px]">
                 <div className="w-[90%] md:w-[60%]  flex flex-row justify-between items-center rounded-3xl bg-white px-7 py-3">
-                    <input className="border-none outline-none text-xl" type='text' placeholder="Search Recipe"/>
+                    <input onChange={getSearchInput} className="border-none outline-none text-xl" type='text' placeholder="Search Recipe"/>
                     <AiOutlineSearch className="text-xl font-bold"/>
                 </div>
                 <div className="relative text-white text-center px-5 md:px-20">

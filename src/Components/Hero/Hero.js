@@ -3,10 +3,10 @@ import Home from './Home'
 
 
 
-function Hero(){
+function Hero({getPop}){
     return(
         <section>
-            <Home/>
+            <Home getPop={getPop}/>
         </section>
     )
 }
