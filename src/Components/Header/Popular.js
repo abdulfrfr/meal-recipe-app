@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import PopData from './PopData';
+import PopHead from "./PopHead";
+import Footer from '../Footer/Footer';
 
 function Popular (){
     
 return(
         <section>
-            <h1 className='font-bold  text-2xl'>Popular Recipes</h1>
-            <hr className='mb-10 mt-2  text-black h-5'/>
-            <div>
-                <PopData/>
-            </div>
+            <PopHead/>
+            <PopData/>
+            
+
+            <Footer/>
         </section>
     )
 }

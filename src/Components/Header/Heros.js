@@ -40,7 +40,7 @@ function Heros(){
         <section className=''>
             <div className='w-full overflow-hidden h-[40vh] opacity md:h-[70vh]'>
                 {imgUrl.map((img, index)=> {return (
-                <div className={index === imgIndex ? 'w-full transform opacity-0 opacity-[1] -translate-x-[20%] -translate-x-[0] transition-all duration-700' : 'transform opacity-0 -translate-x-[20%]'}>
+                <div className={index === imgIndex ? 'w-full transform opacity-0 opacity-[1] -translate-x-[20%] -translate-x-[0] transition-all delay-200 duration-700' : 'transform opacity-0 -translate-x-[20%]'}>
                        {index === imgIndex && 
                        <img 
                        onClick={increaseIndex} 
