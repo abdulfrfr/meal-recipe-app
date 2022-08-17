@@ -38,7 +38,7 @@ function Nav(){
             <AiFillLinkedin className='cursor-pointer mr-5 text-2xl hover:text-orange-700  text-orange-500'/>
         </div>
     </section>
-    <section className={nav ? 'flex justify-center items-center text-center py-5 mt-0 transform transition-all -translate-y-0 opacity-[1] duration-700 delay-200' : '-translate-y-7 mt-[-220px] opacity-0'}>
+    <section className={nav ? 'flex justify-center items-center text-center py-5 mt-0 transform transition-all -translate-y-0 opacity-[1] duration-700 delay-200' : 'text-center transform -translate-y-7 duration-700 delay-200  mt-[-220px] opacity-0'}>
         <div>
         <p className='mb-2'>Home</p>
         <p className='mb-2'>Get Started</p>
