@@ -6,28 +6,28 @@ function Footer() {
     return(
         <section className='bg-green-200'>
             <div className='grid grid-cols-2 md:grid-cols-4 px-10 md:px-20'>
-                <div className='text-center md:text-left mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
+                <div className='text-center md:text-left mr-5 mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
                     <p className='mt-2'>Search by Nutrient</p>
                     <p className='mt-2'>Search by ID</p>
                     <p className='mt-2'>Max Nutrient</p>
                     <p className='mt-2'>Preparation</p>
                     <p className='mt-2'>APIs</p>
                 </div>
-                <div className='text-center md:text-left mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
+                <div className='text-center md:text-left mr-5 mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
                     <p className='mt-2'>Search by Nutrient</p>
                     <p className='mt-2'>Search by ID</p>
                     <p className='mt-2'>Max Nutrient</p>
                     <p className='mt-2'>Preparation</p>
                     <p className='mt-2'>APIs</p>
                 </div>
-                <div className='text-center md:text-left mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
+                <div className='text-center md:text-left mr-5 mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
                     <p className='mt-2'>Search by Nutrient</p>
                     <p className='mt-2'>Search by ID</p>
                     <p className='mt-2'>Max Nutrient</p>
                     <p className='mt-2'>Preparation</p>
                     <p className='mt-2'>APIs</p>
                 </div>
-                <div className='text-center md:text-left mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
+                <div className='text-center md:text-left mr-5 mx-2 my-5 md:my-5 md:mx-2 w-[150px]'>
                     <p className='mt-2'>Search by Nutrient</p>
                     <p className='mt-2'>Search by ID</p>
                     <p className='mt-2'>Max Nutrient</p>
