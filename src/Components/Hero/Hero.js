@@ -3,10 +3,10 @@ import Home from './Home'
 
 
 
-function Hero({getPop}){
+function Hero({setSearch}){
     return(
         <section>
-            <Home getPop={getPop}/>
+            <Home setSearch={setSearch}/>
         </section>
     )
 }

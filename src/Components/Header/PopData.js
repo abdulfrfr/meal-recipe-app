@@ -1,30 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-function PopData(){
 
-    const [popData, setPopData] = useState([]);
-
-    useEffect(
-    ()=>{
-      axios.get('https://api.spoonacular.com/recipes/findByNutrients?minCarbs=100&apiKey=ddc6712f398a4c4299854fe8b47cb04c', {
-          Headers:{
-              'Content-Type': 'application/json'   
-          }
-      })
-      .then((res)=> setPopData(res.data))
-      .then((err)=> console.log(err))
-      console.log('working');
-      console.log(popData);
-    }, [])
-
+function PopData({newPopData}){
     
     return(
-        <section className='flex flex-col md:flex-row'>
-            {popData.map((pop, index)=>{return(
-                <div key={index} id={index}>
-                    <img src={pop.image} alt='popImage'/>
-                    <p>{pop.title}</p>
+        <section className='overflow-x-hidden grid grid-cols-2 md:grid-cols-8 gap-10 justify-around items-center text-center'>
+            {newPopData.map((pop, index)=>{return(
+                <div className='flex flex-col justify-center items-center ' key={index} id={index}>
+                    <div className='bg-gray-00 w-[150px] h-[150px]'>
+                        <img className='w-[150px] h-[150px] mb-5 mix-blend-overlay' src={pop.image} alt='popImage'/>
+                    </div>
+                    <Link to='/chosen'><p className='mb-5'>{pop.title.slice(0, 20)}...</p></Link>
                 </div>
             )})}
         </section>

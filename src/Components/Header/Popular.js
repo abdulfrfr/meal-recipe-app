@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PopData from './PopData';
 import PopHead from "./PopHead";
 import Footer from '../Footer/Footer';
 
-function Popular (){
+function Popular ({newPopData}){
     
 return(
         <section>
             <PopHead/>
-            <PopData/>
+            <PopData newPopData={newPopData}/>
             
 
             <Footer/>

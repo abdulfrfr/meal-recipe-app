@@ -3,13 +3,19 @@ import Steps from './Steps';
 import Heros from './Heros'
 import Popular from './Popular'
 
-function Main(){
+function Main({newPopData}){
+
+    // function event (event){
+    //      console.log(event);
+    // }
+
+    
     return (
-    <section>
+    <div>
         <Heros/>
         <Steps/>
-        <Popular/>
-    </section>
+        <Popular newPopData={newPopData}/>
+    </div>
     )
 }
 
