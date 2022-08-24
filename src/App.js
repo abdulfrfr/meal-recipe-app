@@ -13,6 +13,8 @@ function App() {
   const [popData, setPopData] = useState([]);
   const newPopData = popData.slice(0,8);
 
+  console.log(search);
+  
   useEffect(
     ()=>{
       axios.get('https://api.spoonacular.com/recipes/findByNutrients?minCarbs=100&apiKey=ddc6712f398a4c4299854fe8b47cb04c', {
