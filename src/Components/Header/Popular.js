@@ -3,12 +3,12 @@ import PopData from './PopData';
 import PopHead from "./PopHead";
 import Footer from '../Footer/Footer';
 
-function Popular ({newPopData}){
+function Popular ({popData}){
     
 return(
         <section>
             <PopHead/>
-            <PopData newPopData={newPopData}/>
+            <PopData popData={popData}/>
             
 
             <Footer/>

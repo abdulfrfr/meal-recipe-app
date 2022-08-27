@@ -3,7 +3,7 @@ import Steps from './Steps';
 import Heros from './Heros'
 import Popular from './Popular'
 
-function Main({newPopData}){
+function Main({popData}){
 
     // function event (event){
     //      console.log(event);
@@ -14,7 +14,7 @@ function Main({newPopData}){
     <div>
         <Heros/>
         <Steps/>
-        <Popular newPopData={newPopData}/>
+        <Popular popData={popData}/>
     </div>
     )
 }
